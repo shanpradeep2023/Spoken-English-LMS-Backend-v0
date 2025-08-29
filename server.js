@@ -12,7 +12,6 @@ connectDB();
 const app = express();
 app.use(cors());
 
-console.log("Razorpay Key ID:", process.env.RAZORPAY_KEY_ID);
 
 //  Special middleware for Razorpay Webhook
 app.use("/api/payment/webhook", express.raw({ type: "application/json" }));
